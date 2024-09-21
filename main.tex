@@ -1,0 +1,153 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{textgreek}
+\usepackage{siunitx}
+%Information to be included in the title page:
+\title{WHPC Project Progress}
+\author[Team]{Dream~Team\inst{1}}
+\institute[UF]{\inst{1}University of Florida}
+\date{}
+\author{Salma Ouuaki, Calypsa McCarthy, Noah Jones (project Mentor)}
+
+
+
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+\lstset{
+  basicstyle=\ttfamily\small,  % The default font size and type for listings
+  breaklines=true,             % Enable line wrapping
+  breakatwhitespace=true,      % Only break lines at white space
+  % breakindent=20pt,            % Indent wrapped lines by 20pt
+  % prebreak=\mbox{\textcolor{red}{$\hookleftarrow$}} % Pre-break symbol
+}
+  
+\begin{document}
+
+\frame{\titlepage}
+
+\section{August 2024 Update and Planning Meeting}
+
+\begin{frame}
+  \frametitle{Table of Contents}
+    \begin{enumerate}
+      \item Introduction
+      \item Tentative Plan to kick-start this project
+      \item Resources
+      \item Meeting Plans
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Introduction}
+% Please include by Aug 19:
+% Project overview
+\begin{enumerate}
+  \item This project aims to first implement a UMAP algorithm in Haskell since we were unable to find an implemented version of UMAP in Haskell that is readily available. Haskell has been chosen due to its features as a functional programming language including lazy evaluation, pattern matching, and, parametric polymorphism, allowing for parallelism and concurrency. After we implement UMAP, we want to parallelize this version in order to deliver results faster.
+% Timeline of first step(s)
+  \item Our first phase is the planning phase which will include a UMAP literature review in order to understand how it works. We will also use the planning phase to continue to develop our Haskell skills and begin parsing datasets. Lastly, we will find an example framework of an implemented UMAP in another programming language to use as a guideline for conceptualizing the design architecture and data structure for our framework in Haskell.
+\end{enumerate}
+
+% Approach to conquering the first step
+% Maybe: UMAP literature papers including a) general info about how the UMAP algorithm works and the theory behind it, and b) a concrete implementation of UMAP that we can use as a template for our first steps
+% Maybe: A FASTA file that we can parse
+% Maybe: A library to parse that FASTA file (probably Parsec)
+% Lectures 2-5--2-9 from Well Typed Haskell course
+\end{frame}
+
+\begin{frame}
+  \frametitle{Tentative Plan to kick-start this project}
+  \begin{enumerate}
+  \item UMAP literature review
+  \item Continue to refine Haskell skills by watching and discussing Well-Typed Haskell lectures
+  \item Obtain FASTA file to work with
+  \item Parse FASTA file in Parsec  
+  \item Reduce dimensionality by implementing UMAP 
+  \item Create plan for possible parallelization/distribution
+  \end{enumerate}
+%    \begin{figure}
+%    \centering
+%    \includegraphics[width=0.8\textwidth]{}
+%    \label{fig:}
+%    \caption{}
+%  \end{figure}
+\end{frame}
+
+\begin{frame}{Resources}
+    \begin{enumerate}
+        \item UMAP Paper 1
+        https://dl.acm.org/doi/pdf/10.1145/3569192.3569195
+        \item UMAP Paper 2 https://www.sciencedirect.com/science/article/pii/
+        S266616672100157X
+        \item FASTA File
+        
+        https://www.rcsb.org/structure/1LBS
+        \item Example Implementation
+        https://github.com/NikolayOskolkov/HowUMAPWorks/
+        blob/master/HowUMAPWorks.ipynb
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{20240819 Meeting Plans}
+    \begin{enumerate}
+        \item Greeting and catch up
+        \begin{enumerate}
+            \item Discuss Summers
+            \item Eat
+        \end{enumerate}
+        \item Calypsa and Salma present
+        \begin{enumerate}
+            \item Audience asks questions
+            \item Discuss plan for moving forward
+        \end{enumerate}
+        \item Present Calypsa and Salma with HDs 
+        \begin{enumerate}
+            \item Boot laptops from HDs to make sure it works
+            \item Regenerate hardware configuration for laptops
+            \item Install VS Code and demo NixOS
+        \end{enumerate}
+        \item Lecture discussion
+        \begin{enumerate}
+            \item Good things about the past weeks' lectures
+            \item Questions about lectures
+            \item Practice code on NixOS
+        \end{enumerate}
+    \end{enumerate}
+\end{frame}
+
+\section{Distributed UMAP}
+
+\begin{frame}{Introduction to UMAP}
+    
+\end{frame}
+
+\begin{frame}{UMAP Rerference Implementation}
+    
+\end{frame}
+
+\begin{frame}{Spatial Decomposition}
+    
+\end{frame}
+
+\section{FASTA Parsing}
+
+\begin{frame}{FASTA Standard}
+    
+\end{frame}
+
+\begin{frame}{Introduction to Parsec}
+    
+\end{frame}
+
+
+\begin{frame}{Parsing Implementation}
+    
+\end{frame}
+
+\end{document}
